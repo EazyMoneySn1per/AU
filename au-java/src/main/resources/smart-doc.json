@@ -1,0 +1,9 @@
+{
+  "serverUrl": "http://localhost:8080",
+  "isStrict": false,
+  "allInOne": true,
+  "outPath": "./src/main/resources/static/doc",
+  "responseBodyAdvice":{
+    "className":"com.fran6k.study.springbootstudy.utils.ResultModel"
+  }
+}

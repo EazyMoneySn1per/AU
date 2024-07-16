@@ -1,0 +1,177 @@
+.myContainer {
+  position: relative;
+  width: 100%;
+  min-height: 1440rpx;
+  background-color: #efefef;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  /* padding: 200rpx 0; */
+  box-sizing: border-box;
+  padding-bottom: 180rpx;
+}
+.myContainer .blueBox {
+  width: 100%;
+  height: 430rpx;
+  background-color: #024e9b;
+}
+.myContainer .radiuBox {
+  position: absolute;
+  top: 280rpx;
+  height: 300rpx;
+  width: 140%;
+  border-radius: 50% / 100% 100% 0 0;
+  background-color: #efefef;
+  box-sizing: border-box;
+}
+.myContainer .info {
+  position: absolute;
+  top: 182rpx;
+  left: 248rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.myContainer .info .avatar-wrapper {
+  width: 200rpx;
+  height: 200rpx;
+  border-radius: 50%;
+  padding: 0;
+}
+.myContainer .info .avatar-wrapper .van-image,
+.myContainer .info .avatar-wrapper .van-image__error,
+.myContainer .info .avatar-wrapper .van-image__img,
+.myContainer .info .avatar-wrapper .van-image__loading {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+.myContainer .info .name {
+  font-size: 44rpx;
+  margin-top: 38rpx;
+}
+.myContainer .info .id {
+  color: #797979;
+  font-size: 28rpx;
+  margin-top: 8rpx;
+}
+.myContainer .auBox {
+  position: absolute;
+  top: 600rpx;
+  width: 666rpx;
+  height: 218rpx;
+  background-color: #fff;
+  text-align: center;
+  border-radius: 16rpx;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.myContainer .auBox .left,
+.myContainer .auBox .right {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+}
+.myContainer .auBox .left .icon,
+.myContainer .auBox .right .icon {
+  position: absolute;
+  top: -20rpx;
+  right: 0;
+  width: 80rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  border-radius: 50%;
+}
+.myContainer .auBox .left .icon:active,
+.myContainer .auBox .right .icon:active {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.myContainer .auBox .mid {
+  width: 2rpx;
+  background-color: #e9e9e9;
+  height: 140rpx;
+}
+.myContainer .auBox .auAvatar {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  box-sizing: border-box;
+  margin-bottom: 20rpx;
+}
+.myContainer .auBox .auAvatar .image {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+.myContainer .auBox .auName {
+  color: #797979;
+  font-size: 28rpx;
+}
+.myContainer .auBox .van-icon::after {
+  width: 50rpx;
+  height: 50rpx;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.myContainer .mainBox {
+  position: absolute;
+  top: 880rpx;
+  width: 666rpx;
+  height: 220rpx;
+  border-radius: 16rpx;
+  display: flex;
+  justify-content: space-between;
+}
+.myContainer .mainBox .item:active {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.myContainer .mainBox .item {
+  width: 200rpx;
+  height: 100%;
+  background-color: #fff;
+  border-radius: 16rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.myContainer .mainBox .item image {
+  width: 62rpx;
+  height: 62rpx;
+  margin-bottom: 52rpx;
+}
+.myContainer .mainBox .item text {
+  font-size: 28rpx;
+  color: #797979;
+}
+.myContainer .mainBox .item:last-child image {
+  width: 54rpx;
+  height: 54rpx;
+}
+.myContainer .manager {
+  position: absolute;
+  top: 1160rpx;
+  width: 666rpx;
+  height: 104rpx;
+  background-color: #fff;
+  border-radius: 16rpx;
+  text-align: center;
+}
+.myContainer .manager:active {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.myContainer .manager text {
+  font-size: 28rpx;
+  color: #797979;
+  line-height: 104rpx;
+}
+.myContainer .van-button__text {
+  color: #024e9b !important;
+}

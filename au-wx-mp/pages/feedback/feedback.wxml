@@ -1,0 +1,50 @@
+<page-meta>
+  <navigation-bar
+    title="意 见 反 馈"
+  />
+</page-meta>
+
+<view class="title"> 请选择您想反馈的问题类型 </view>
+<view class="question-type">
+  <van-checkbox-group
+    value="{{ result }}"
+    bind:change="onChange"
+  >
+    <van-checkbox name="internet">网络卡顿/加载时长久</van-checkbox>
+    <van-checkbox name="bug">使用过程中出现异常闪退</van-checkbox>
+    <van-checkbox name="function">没有我想要的功能</van-checkbox>
+    <van-checkbox name="other">其他问题或者建议</van-checkbox>
+  </van-checkbox-group>
+</view>
+<van-field
+  value="{{ message }}"
+  type="textarea"
+  placeholder="遇到的问题或者您宝贵的建议"
+  border="{{ false }}"
+  custom-style="margin-top: 20px"
+  show-word-limit="{{true}}"
+  maxlength="150"
+/>
+<!-- <view class="button"> -->
+  <!-- <van-button type="info" color="#295bc4" bind:click="onSubmit">提交</van-button> -->
+<!-- </view> -->
+<van-toast id="van-toast" />
+
+<view class="file">
+  <view class="text">相关截图或照片</view>
+  <van-uploader file-list="{{ fileList }}" bind:after-read="afterRead" max-count="3" bind:delete="deleteImg">
+  </van-uploader>
+  <view class="percent" style="opacity: 0.7; color: rgba(16, 16, 16, 100);">{{fileList.length}}/3</view>
+</view>
+
+<view class="bottom-bar">
+  <view class="progess" wx:if="{{fileList.length < 3}}">
+    <van-icon name="close" size="18px" style="position: absolute; top: 8px; right: 32rpx;"/>
+    <van-icon name="label-o" />
+    <view class="progress-main" >
+      图片{{fileList.length + 1}}.jpg
+      <van-progress percentage="{{percentage}}" show-pivot="{{false}}" stroke-width="2px"/>
+    </view>
+  </view>
+  <button class="feedback-submit" bindtap="onSubmit">提交</button>
+</view>

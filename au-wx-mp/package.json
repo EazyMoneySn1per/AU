@@ -1,0 +1,27 @@
+{
+  "name": "au-wx-app",
+  "version": "1.0.0",
+  "main": ".eslintrc.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@vant/weapp": "^1.10.3",
+    "miniprogram-api-promise": "^1.0.4",
+    "miniprogram-sm-crypto": "^0.3.8",
+    "mobx-miniprogram": "^4.13.2",
+    "mobx-miniprogram-bindings": "^2.1.5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://fran6k.live:3000/sztu-au/au-wx-mp.git"
+  },
+  "keywords": [],
+  "description": "",
+  "devDependencies": {
+    "eslint-config-prettier": "^8.5.0",
+    "prettier": "^2.7.1"
+  }
+}

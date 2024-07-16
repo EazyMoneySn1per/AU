@@ -1,0 +1,119 @@
+.joinAssociationContainer {
+  display: flex;
+  flex-direction: column;
+  min-height: 1444rpx;
+  align-items: center;
+  background-color: #fff;
+
+  .title {
+    height: 72rpx;
+    text-align: center;
+    line-height: 72rpx;
+    // color: #3D3D3D;
+    font-size: 38rpx;
+    margin-top: 32rpx;
+    font-weight: bold;
+  }
+
+  .banner {
+    width: 580rpx;
+    height: 360rpx;
+    margin: 56rpx 0 20rpx;
+  }
+
+  .form {
+    width: 622rpx;
+    margin: 64rpx auto 0;
+
+    .formItem {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      margin-bottom: 20rpx;
+
+      image {
+        width: 52rpx;
+        height: 52rpx;
+        margin-right: 48rpx;
+      }
+
+      input {
+        color: rgba(122, 122, 122, 100);
+        font-size: 30rpx;
+        border-bottom: 1px solid #bbb;
+        padding-bottom: 10rpx;
+        width: 500rpx;
+      }
+    }
+
+    .phone .van-cell {
+      padding-right: 0;
+    }
+
+    .wx .van-cell {
+      padding-right: 0;
+    }
+
+    .ownInfo {
+      align-items: flex-start;
+      margin-bottom: 16px;
+
+      .van-cell {
+        padding: 0 !important;
+        background-color: #dcdcdc;
+        height: 300rpx;
+        width: 500rpx;
+        border-radius: 20rpx;
+      }
+      textarea {
+        padding: 7px 10px;
+        height: 240rpx;
+        width: 500rpx;
+        word-break: break-all;
+        overflow: visible;
+        font-size: 28rpx;
+        padding-bottom: 0;
+      }
+      .van-field__word-limit {
+        margin-top: 0;
+        margin-right: 4px;
+      }
+    }
+
+    .chooseAsso {
+      .showPicker {
+        width: 500rpx;
+        height: 72rpx;
+        padding: 14rpx 28rpx;
+        box-sizing: border-box;
+        font-size: 28rpx;
+        color: #7a7a7a;
+        border: 1px solid rgba(187, 187, 187, 100);
+        border-radius: 16rpx;
+      }
+    }
+
+    .showPicker:active {
+      background-color: rgba(0, 0, 0, 0.2);
+    }
+
+    .submit button {
+      width: 600rpx;
+      height: 80rpx;
+      line-height: 80rpx;
+      border-radius: 30rpx;
+      background-color: rgb(25, 137, 250);
+      margin-top: 40rpx;
+      padding: 0;
+
+      text-align: center;
+      font-size: 36rpx;
+      color: #fff;
+      letter-spacing: 16rpx;
+    }
+
+    .submit button:active {
+      background-color: rgba(23, 124, 225);
+    }
+  }
+}

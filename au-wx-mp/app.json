@@ -1,0 +1,52 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/association/association",
+    "pages/my/my",
+    "pages/bindId/bindId",
+    "pages/feedback/feedback",
+    "pages/test/test",
+    "pages/Asso/joinAssociation/joinAssociation",
+    "pages/Asso/assoDescription/assoDescription",
+    "pages/Asso/myInterview/myInterview",
+    "pages/Asso/assoDetail/assoDetail",
+    "pages/Au/department/department",
+    "pages/Au/activities/activities",
+    "components/card/card",
+    "components/Article/Article"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "社联+",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "custom": true,
+    "selectedColor": "#1296db",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "/images/tabbar/home.png",
+        "selectedIconPath": "/images/tabbar/home-active.png"
+      },
+      {
+        "pagePath": "pages/association/association",
+        "text": "社团",
+        "iconPath": "/images/tabbar/search.png",
+        "selectedIconPath": "/images/tabbar/search-active.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "/images/tabbar/friends.png",
+        "selectedIconPath": "/images/tabbar/friends-active.png"
+      }
+    ]
+  },
+  "usingComponents": {
+    "van-icon": "@vant/weapp/icon/index"
+  }
+}

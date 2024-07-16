@@ -1,0 +1,73 @@
+<view class="myContainer">
+  <!-- 蓝色背景层 -->
+  <view class="blueBox"></view>
+  <!-- 白色圆弧 -->
+  <view class="radiuBox"></view>
+  <!-- 学生信息 -->
+  <view class="info">
+    <!-- <view class="avatar">
+      <van-image
+        src="{{ avatar }}"
+      ></van-image>
+    </view> -->
+    <button class="avatar-wrapper" open-type="chooseAvatar" bind:chooseavatar="onChooseAvatar">
+      <van-image class="avatar" src="{{avatarUrl}}"></van-image>
+    </button> 
+    <div class="name">{{realName}}</div>
+    <div class="id">学号：{{studentId}}</div>
+  </view>
+  <!-- 学生所加入社团信息 -->
+  <view class="auBox">
+    <view class="left" >
+      <view class="auAvatar" style="{{leftAss.AssName ? '' : 'background-color: #efefef'}}">
+        <image class="image" src="{{logoSrc + leftAss.Logo}}"></image>
+      </view>
+      <text class="auName">{{leftAss.AssName || '无社团'}}</text>
+      <view class="icon" wx:if="{{leftAss.AssName}}">
+        <van-icon name="/images/icons/exit.png" bindtap="exitAss" data-obj="left"></van-icon>
+      </view>
+    </view>
+    <view class="mid"></view>
+    <view class="right">
+      <view class="auAvatar" style="{{rightAss.AssName ? '' : 'background-color: #efefef'}}">
+        <image class="image" src="{{logoSrc + rightAss.Logo}}"></image> 
+      </view>
+      <text class="auName">{{rightAss.AssName || '无社团'}}</text>
+      <view class="icon" wx:if="{{rightAss.AssName}}">
+        <van-icon name="/images/icons/exit.png" bindtap="exitAss" data-obj="right"></van-icon>
+      </view>
+    </view>
+  </view>
+  <!-- 报名查询、报名系统、意见反馈链接 -->
+  <view class="mainBox">
+    <view
+      class="item" 
+      bindtap="goto"
+      data-url="myInterview"
+    >
+      <van-icon name="search" size="60rpx" style="margin-bottom:3vh"/>
+      <text>报名信息</text>
+    </view>
+    <view
+      class="item"
+      bindtap="goto"
+      data-url="joinAssociation"
+    >
+      <van-icon name="like-o" size="60rpx" style="margin-bottom:3vh"/>
+      <text>报名入口</text>
+    </view>
+    <view
+      class="item"
+      bindtap="goto"
+      data-url="feedback"
+    >
+      <van-icon name="edit" size="60rpx" style="margin-bottom:3vh"/>
+      <text>意见反馈</text>
+    </view>
+  </view>
+  <!-- 管理人员 -->
+  <view class="manager" bindtap="NoPermisson">
+    <text>管理人员登录入口</text>
+  </view>
+</view>
+<van-dialog id="van-dialog" confirm-button-color="#0f4f96" />

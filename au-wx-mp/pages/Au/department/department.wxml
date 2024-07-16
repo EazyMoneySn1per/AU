@@ -1,0 +1,9 @@
+<view class="container">
+  <card wx:for="{{list}}" wx:key="index" picUrl="{{item.picUrl}}" url="{{item.url}}" title="{{item.title}}"></card>
+</view>
+
+<page-meta>
+  <navigation-bar
+    title="社 联 部 门"
+  />
+</page-meta>

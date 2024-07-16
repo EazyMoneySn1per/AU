@@ -1,0 +1,51 @@
+
+
+# jwt configuration
+#jwt:
+#  signing-key: 'qmPlus'
+#  expires-time: 604800
+#  buffer-time: 86400
+
+# zap logger configuration
+zap:
+  level: 'info'
+  format: 'console'
+  prefix: '[社联管理平台系统]'
+  director: 'log'
+  link-name: 'latest_log'
+  show-line: true
+  encode-level: 'LowercaseColorLevelEncoder'
+  stacktrace-key: 'stacktrace'
+  log-in-console: true
+
+
+# system configuration
+system:
+  env: 'public'  # Change to "develop" to skip authentication for development mode
+  addr: 8888
+  db-type: 'mysql'
+  oss-type: 'local'    # 控制oss选择走本期还是 七牛等其他仓 自行增加其他oss仓可以在 server/utils/upload/upload.go 中 NewOss函数配置
+  use-multipoint: false
+
+
+
+# mysql connect configuration
+mysql:
+  path: '' #数据库地址
+  config: 'charset=utf8mb4&parseTime=true'
+  db-name: '' #数据库名称
+  username: 'root' #数据库用户名
+  password: '' #数据库密码
+  max-idle-conns: 10
+  max-open-conns: 100
+  log-mode: false
+  log-zap: ""
+
+# local configuration
+local:
+  path: 'uploads/file'
+  excel: '' #上传excel路径
+
+interview:
+  open-time: '2021-09-02 00:00:00'
+  end-time: '2021-10-08 00:00:00'

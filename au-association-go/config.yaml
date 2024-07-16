@@ -1,0 +1,40 @@
+mysql:
+  path: '127.0.0.1'
+  port: '3306'
+  config: 'charset=utf8mb4&parseTime=True&loc=Local'
+  dbname: 'shelian'
+  username: 'root'
+  password: '123456'
+  max-idle-conns: 10
+  max-open-conns: 100
+  log-mode: ""
+  log-zap: false
+
+system:
+  env: 'develop'
+  addr: 8002
+  db-type: 'mysql'
+  oss-type: 'local'
+  oss-redis: false
+  use-multipoint: false
+  # IP限制次数 一个小时15000次
+  iplimit-count: 15000
+  #  IP限制一个小时
+  iplimit-time: 3600
+
+mpKey:
+    appsecret: ba728f7f08739d024e18a85571fe41cf
+    appid: wxce51d21a2b4b2e7d
+local:
+  path: 'uploads/file'
+  excel: '' #上传excel路径
+
+interview:
+    open-time: '2022-09-23 00:00:00'
+    end-time: '2022-10-01 00:00:00'
+StoragePath:
+  RootActivityPath: '/home/auServerData/activities'
+  RootAssLogoPath: '/home/auServerData/assLogo'
+  RootOutlayPath: '/home/auServerData/outlay'
+  RootPicturePath: '/home/auServerData/twitter'
+  RootSynthesizePath: '/home/auServerData/synthesizesubmit'

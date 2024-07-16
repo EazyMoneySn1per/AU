@@ -1,0 +1,43 @@
+<!--pages/association/association.wxml-->
+<view class="assoContainer">
+  <view class="top">
+    <!-- 顶部搜索栏 -->
+    <view class="searchbar">
+      <van-icon name="apps-o" class="collapse" bind:tap="openDropDown"/>
+      <van-search model:value="{{ value }}" shape="round" placeholder="请输入搜索关键词" bind:change="searchChange" bind:search="getSearchInfo"/>
+    </view>
+    <!-- 顶部搜索栏 -->
+    <!-- 选择类别 -->
+    <van-dropdown-menu  active-color="#0f4f96" style="display: {{isSearch ? 'none' : 'block'}};">
+      <van-dropdown-item id="dropdown" value="{{ currentSelectValue }}" options="{{ assoKind }}" bind:change="onAssTypeChange" catchtouchmove/>
+    </van-dropdown-menu>
+    <view class="searchRes" style="display: {{isSearch  ? 'block' : 'none'}};">搜索结果
+      <van-icon name="success" />
+    </view>
+    <!-- 选择类别 -->
+  </view>
+  <!-- 当前选择类别社团列表 -->
+  <view class="assList">
+    <view class="item" wx:for="{{currentList}}" wx:key="assId" bindtap="onClick" data-obj="{{item}}">
+      <view class="overlay"></view>
+      <view class="item-left">
+        <view class="assLogo">
+          <image style="width: 100rpx; height: 100rpx; border-radius: 50rpx;" src="{{assLogoServer + item.logo}}">
+          </image>
+        </view>
+        <view class="assContent">
+          <view class="assName">{{item.assName}}</view>
+          <view class="assDesc">{{item.assDescription}}</view>
+        </view>
+      </view>
+      <view class="item-right">
+        <view class="finger" style="width: 80rpx; height: 80rpx;">
+          <image src="/images/icons/associations-finger.png" style="width: 80rpx; height: 80rpx;"></image>
+        </view>
+        <view class="text">点击查看</view>
+      </view>
+    </view>
+  </view>
+  <!-- 当前选择类别社团列表 -->
+
+</view>

@@ -1,0 +1,68 @@
+.card {
+  position: relative;
+  width: 600rpx;
+  height: 800rpx;
+  margin: 200rpx auto;
+  border-radius: 30px;
+  background: #fff;
+  box-shadow: 15px 15px 30px #bebebe, -15px -15px 30px #ffffff;
+}
+
+.box1 {
+  position: absolute;
+  top: 60rpx;
+  left: 100rpx;
+  /* font-weight: bold; */
+  font-size: 36rpx;
+  letter-spacing: 4rpx;
+}
+
+.logo {
+  position: absolute;
+  top: 0;
+  transform: translateY(-50%);
+  right: 0;
+  width: 200rpx;
+  height: 280rpx;
+  /* height: 160rpx; */
+}
+
+page {
+  background-color: #f2f5fc;
+}
+
+.wrapper {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  width: 380rpx;
+  height: 250rpx;
+  font-weight: 600;
+  transform: translate(-48%, -50%);
+  text-align: center;
+  letter-spacing: 0.05em;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.tips {
+}
+
+.retry {
+  width: 180rpx;
+  padding: 0;
+  background-color: #2f66f4;
+  color: #fff;
+  border-radius: 24rpx;
+  height: 90rpx;
+  line-height: 90rpx;
+  letter-spacing: 0.4em;
+  font-size: 30rpx;
+  text-align: center;
+}
+
+.retry:active {
+  background-color: #7699f1;
+}

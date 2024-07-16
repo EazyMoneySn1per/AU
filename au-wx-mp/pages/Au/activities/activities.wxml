@@ -1,0 +1,47 @@
+<view class="container">
+  <van-tabs
+    active="{{ active }}"
+    sticky
+    color="#0D4E9A"
+    title-active-color="#000"
+    swipeable
+    animated
+  >
+    <van-tab title="2022">
+      <card
+        wx:for="{{ list_2022 }}"
+        wx:key="{{ index }}"
+        picUrl="{{ item.picUrl }}"
+        url="{{ item.url }}"
+        title="{{ item.title }}"
+        time="{{ item.time }}"
+      >
+    </card></van-tab>
+    <van-tab title="2021">
+      <card
+        wx:for="{{ list_2021 }}"
+        wx:key="index"
+        picUrl="{{ item.picUrl }}"
+        url="{{ item.url }}"
+        title="{{ item.title }}"
+        time="{{ item.time }}"
+      ></card>
+    </van-tab>
+    <van-tab title="2020">
+      <card
+        wx:for="{{ list_2020 }}"
+        wx:key="index"
+        picUrl="{{ item.picUrl }}"
+        url="{{ item.url }}"
+        title="{{ item.title }}"
+        time="{{ item.time }}"
+      ></card>
+    </van-tab>
+  </van-tabs>
+</view>
+
+<page-meta>
+  <navigation-bar
+    title="社 联 活 动"
+  />
+</page-meta>

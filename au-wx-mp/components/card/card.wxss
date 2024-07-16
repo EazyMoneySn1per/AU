@@ -1,0 +1,29 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 680rpx;
+  margin-top: 20rpx;
+}
+
+.card-title {
+  width: 680rpx;
+  height: 80rpx;
+  line-height: 80rpx  ;
+  background-color: white;
+  text-align: center;
+  font-size: 28rpx;
+  font-weight: bold;
+}
+
+.card-time {
+  font-size: 14px;
+  color: #888888;
+  margin: 1vh;
+}
+
+.image {
+  width: 680rpx;
+  height: 280rpx;
+}

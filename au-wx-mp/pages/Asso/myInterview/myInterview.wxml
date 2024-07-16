@@ -1,0 +1,77 @@
+<page-meta background-text-style="dark">
+  <navigation-bar
+    title="报 名 查 询"
+  />
+</page-meta>
+
+<van-dialog id="van-dialog" bind:confirm="onSubscribeMessage" />
+<view class="nopcontainer">
+  <view bindtap="goto" style="width: 750rpx; height: 360rpx;">
+    <image
+      src="http://mmbiz.qpic.cn/mmbiz_jpg/S2QIjGmZ77Ry1I1bhVHherSopWqmQ7foAhY19cNL0X7AqP66I5NLmOICIIykticN8rau4YNTllpzwQqpph3Tv7Q/0?wx_fmt=jpeg"
+      style="width: 100%; height: 100%;">
+    </image>
+  </view>
+  <van-tabs active="{{ active }}" bind:change="onChange" swipeable animated sticky color="#0D4E9A"
+  title-active-color="#000">
+    <van-tab title="学生社团">
+      <van-empty custom-class="empty-1" description="没有报名信息哦" wx:if="{{auIsEmpty}}" />
+      <!-- 社团卡片 -->
+      <scroll-view class="scroll-view" scroll-y="true" style="height: {{ scrollViewHeight }}px;" refresher-enabled bindrefresherrefresh="onPullDownRefresh" refresher-triggered="{{refresh}}">
+        <view class="ass-card" wx:for="{{list1}}" wx:key="id">
+          <!--左侧logo和社团名称-->
+          <view class="ass-card-left">
+            <van-image round width="200rpx" height="200rpx" src="{{assLogoServer + item.assLogo}}"></van-image>
+            <view class="ass-card-left-assName">{{item.assName}}</view>
+          </view>
+          <!--右侧信息-->
+          <view class="my-ass-card-right">
+            <view class="ass-card-right-assInfo">状态：{{item.interViewStatusMessage}}
+            </view>
+            <view class="ass-card-right-assInfo">联系人：{{item.presidentName}}</view>
+            <view class="ass-card-right-assInfo">联系方式：
+              <span style="color: #001ba0">{{item.presidentWechat}}</span>
+            </view>
+              <van-cell title="反馈信息" border="{{ false }}" is-link bind:click="openMessageDialog" data-msg="{{item.BackMessage}}"/>
+            <view class="ass-card-right-button" wx:if="{{item.interViewStatus === 2}}">
+              <van-button color="#0D4E9A" bindtap="studentConfirm" data-id="{{item.id}}">确认加入</van-button>
+              <van-button bindtap="studentCancel" data-id="{{item.id}}">放弃加入</van-button>
+            </view>
+          </view>
+        </view>
+      </scroll-view>
+    </van-tab>
+    <van-tab title="社联">
+      <van-notice-bar style="padding-top: 20rpx;" left-icon="volume-o">
+        <swiper style="width: 600rpx; height: 80rpx; transform: translate(10rpx, -5rpx);" autoplay="false"
+          circular="true" interval="2500" vertical="true">
+          <swiper-item>报名2个部门进入社联的概率更大哦</swiper-item>
+          <swiper-item>面试相关通知会在这里进行更新！请及时关注</swiper-item>
+          <swiper-item>报名成功后记得加入社联招新咨询群！</swiper-item>
+        </swiper>
+      </van-notice-bar>
+      <view class="ass-card" wx:for="{{list2}}" wx:key="uuid">
+        <!--左侧logo和部门名称-->
+        <view class="ass-card-left">
+          <van-image round width="6.25rem" height="6.25rem" src="{{assLogoServer + item.departmentName + '.png'}}"></van-image>
+          <view class="ass-card-left-assName">{{ item.departmentName }}</view>
+        </view>
+        <!--右侧信息-->
+        <view class="my-ass-card-right">
+          <van-steps active="{{activeSteps[index]}}"
+            active-icon="{{item.status === '9' || item.status === '8' ? 'cross':'like-o'}}"
+            active-color="{{item.status === '8' || item.status === '9' ? '#e54242':'#0D4E9A'}}"
+            steps="{{steps[index]}}"
+            >
+          </van-steps>
+          <view class="ass-card-right-assInfo">面试时间：{{item.time}}</view>
+          <view class="ass-card-right-assInfo">面试地点：{{item.location}}</view>
+          <van-cell title="反馈信息" border="{{ false }}" is-link bind:click="openMessageDialog" data-msg="{{item.backMessage}}"/>
+          <view style="height: 2vh"></view>
+        </view>
+      </view>
+      <van-empty description="没有报名信息哦" wx:if="{{assoIsEmpty}}" />
+    </van-tab>
+  </van-tabs>
+</view>
+<van-notify id="van-notify" />

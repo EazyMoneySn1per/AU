@@ -1,0 +1,101 @@
+.joinAssociationContainer {
+  display: flex;
+  flex-direction: column;
+  min-height: 1444rpx;
+  align-items: center;
+  background-color: #fff;
+}
+.joinAssociationContainer .title {
+  height: 72rpx;
+  text-align: center;
+  line-height: 72rpx;
+  font-size: 38rpx;
+  margin-top: 32rpx;
+  font-weight: bold;
+}
+.joinAssociationContainer .banner {
+  width: 580rpx;
+  height: 360rpx;
+  margin: 56rpx 0 20rpx;
+}
+.joinAssociationContainer .form {
+  width: 622rpx;
+  margin: 64rpx auto 0;
+}
+.joinAssociationContainer .form .formItem {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 20rpx;
+}
+.joinAssociationContainer .form .formItem image {
+  width: 52rpx;
+  height: 52rpx;
+  margin-right: 48rpx;
+}
+.joinAssociationContainer .form .formItem input {
+  color: #7a7a7a;
+  font-size: 30rpx;
+  border-bottom: 1px solid #bbb;
+  padding-bottom: 10rpx;
+  width: 500rpx;
+}
+.joinAssociationContainer .form .phone .van-cell {
+  padding-right: 0;
+}
+.joinAssociationContainer .form .wx .van-cell {
+  padding-right: 0;
+}
+.joinAssociationContainer .form .ownInfo {
+  align-items: flex-start;
+  margin-bottom: 16px;
+}
+.joinAssociationContainer .form .ownInfo .van-cell {
+  padding: 0 !important;
+  background-color: #dcdcdc;
+  height: 300rpx;
+  width: 500rpx;
+  border-radius: 20rpx;
+}
+.joinAssociationContainer .form .ownInfo textarea {
+  padding: 7px 10px;
+  height: 240rpx;
+  width: 500rpx;
+  word-break: break-all;
+  overflow: visible;
+  font-size: 28rpx;
+  padding-bottom: 0;
+}
+.joinAssociationContainer .form .ownInfo .van-field__word-limit {
+  margin-top: 0;
+  margin-right: 4px;
+}
+.joinAssociationContainer .form .chooseAsso .showPicker {
+  width: 500rpx;
+  height: 72rpx;
+  padding: 14rpx 28rpx;
+  box-sizing: border-box;
+  font-size: 28rpx;
+  color: #7a7a7a;
+  border: 1px solid #bbbbbb;
+  border-radius: 16rpx;
+}
+.joinAssociationContainer .form .showPicker:active {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.joinAssociationContainer .form .submit button {
+  width: 600rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  border-radius: 30rpx;
+  background-color: #0f4f96;
+  margin-top: 40rpx;
+  padding: 0;
+  text-align: center;
+  font-size: 36rpx;
+  color: #fff;
+  letter-spacing: 16rpx;
+}
+.joinAssociationContainer .form .submit button:active {
+  background-color: #0f4f96;
+}

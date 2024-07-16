@@ -1,0 +1,12 @@
+spring:
+  profiles:
+    active: dev
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 100MB
+      enabled: true
+#  appid: wx74205c3a77adbcdc
+#  appsecret: b93d197d2b0c605176a4dd76b907f005
+
+

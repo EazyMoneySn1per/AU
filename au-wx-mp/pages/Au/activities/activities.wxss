@@ -1,0 +1,7 @@
+.van-tabs {
+  width: 680rpx;
+}
+
+.block {
+  min-height: 500px;
+}

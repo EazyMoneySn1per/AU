@@ -1,0 +1,115 @@
+.assoContainer {
+  min-height: 1400rpx;
+  padding-bottom: 100rpx;
+}
+.assoContainer .top {
+  width: 100%;
+  height: 300rpx;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+}
+.assoContainer .top .searchbar {
+  height: 110rpx;
+  display: flex;
+  align-items: center;
+  margin: 10rpx auto -20rpx;
+}
+.assoContainer .top .searchbar .collapse {
+  font-size: 56rpx;
+}
+.assoContainer .top .searchbar .van-search {
+  width: 594rpx;
+  padding: 0;
+  margin: 0;
+  margin-left: 40rpx;
+}
+.assoContainer .top .van-dropdown-menu {
+  box-shadow: none;
+  width: 220rpx;
+}
+.assoContainer .top .van-dropdown-menu .van-dropdown-item {
+  z-index: 99 !important;
+}
+.assoContainer .top .van-dropdown-menu .van-dropdown-item .van-cell {
+  padding-left: 50rpx;
+  padding-right: 50rpx;
+}
+.assoContainer .top .searchRes {
+  width: 250rpx;
+  height: 100rpx;
+  text-align: center;
+  line-height: 100rpx;
+}
+.assoContainer .assList,
+.assoContainer .search-list {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transform: translateY(-80rpx);
+}
+.assoContainer .assList .item,
+.assoContainer .search-list .item {
+  position: relative;
+  margin: 0rpx auto;
+  display: flex;
+  margin-bottom: 60rpx;
+}
+.assoContainer .assList .item .overlay,
+.assoContainer .search-list .item .overlay {
+  position: absolute;
+  background-color: #000;
+  opacity: 0.3;
+  width: 100%;
+  height: 100%;
+  border-radius: 16rpx;
+  z-index: 99;
+  display: none;
+}
+.assoContainer .assList .item .item-left,
+.assoContainer .search-list .item .item-left {
+  z-index: 9;
+  width: 518rpx;
+  min-height: 200rpx;
+  border-radius: 16rpx 0px 0px 16rpx;
+  background-color: #fff;
+  box-shadow: 4rpx 0rpx 16rpx 0px rgba(36, 36, 36, 0.1);
+  padding: 20rpx 20rpx 20rpx 32rpx;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+}
+.assoContainer .assList .item .item-left .assLogo,
+.assoContainer .search-list .item .item-left .assLogo {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50rpx;
+  margin-right: 10rpx;
+}
+.assoContainer .assList .item .item-left .assName,
+.assoContainer .search-list .item .item-left .assName {
+  font-size: 30rpx;
+}
+.assoContainer .assList .item .item-left .assDesc,
+.assoContainer .search-list .item .item-left .assDesc {
+  font-size: 24rpx;
+  color: #a6a6a6;
+}
+.assoContainer .assList .item .item-right,
+.assoContainer .search-list .item .item-right {
+  width: 150rpx;
+  min-height: 200rpx;
+  background-color: #fff;
+  border-radius: 0 16rpx 16rpx 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.assoContainer .assList .item .item-right .text,
+.assoContainer .search-list .item .item-right .text {
+  margin-top: 10rpx;
+  font-size: 28rpx;
+  color: #797979;
+}

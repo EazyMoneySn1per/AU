@@ -1,0 +1,14 @@
+{
+  "usingComponents": {
+    "van-checkbox": "@vant/weapp/checkbox/index",
+    "van-checkbox-group": "@vant/weapp/checkbox-group/index",
+    "van-field": "@vant/weapp/field/index",
+    "van-button": "@vant/weapp/button/index",
+    "van-toast": "@vant/weapp/toast/index",
+    "van-uploader": "@vant/weapp/uploader/index",
+    "van-progress": "@vant/weapp/progress/index"
+  },
+  "window": {
+    "navigationBarTitleText": "意见反馈"
+  }
+}

@@ -1,0 +1,58 @@
+<view class="container" wx:if="{{isConnected}}">
+  <swiper autoplay style="height:560rpx;width:100%" interval="2000" circular>
+    <swiper-item>
+      <view class="banner" bindtap="goto" data-url="page1">
+        <image class="bannerImg" src="https://i.imgtg.com/2022/05/13/z9JCN.png"></image>
+      </view>
+    </swiper-item>
+    <swiper-item>
+      <view class="banner" bindtap="goto" data-url="mysztu">
+        <image class="bannerImg" src="http://au.sztu.edu.cn/images/mysztu.jpg"></image>
+      </view>
+    </swiper-item>
+  </swiper>
+
+  <view class="join">
+    <image class="joinImg" bindtap="goto" data-url="page2"
+      src="http://mmbiz.qpic.cn/mmbiz_jpg/S2QIjGmZ77TibX6YP0TnhVurkSlKhPNZ8hlWjqVrp7yrdQ44wcBPrmhFVsQq1T127YpegD14jXtG9tfOibREwDLA/0?wx_fmt=jpeg" />
+  </view>
+  <view class="main_box">
+    <view class="left" bindtap="goto" data-url="department">
+      <image src="https://i.imgtg.com/2022/05/13/z9gqK.png"/>
+      <text class="text">社联部门</text>
+    </view>
+    <view class="mid"></view>
+    <view class="right" bindtap="goto" data-url="actvities">
+      <image src="https://i.imgtg.com/2022/05/13/z9mAa.png"/>
+      <text class="text">社联活动</text>
+    </view>
+  </view>
+  <view class="introduce" bindtap="goto" data-url="assoDesc">
+    <image class="" src="https://i.imgtg.com/2022/05/13/z9pQS.png" mode="aspectFit|aspectFill|widthFix" lazy-load="true">
+    </image>
+    <view class="mask"></view>
+  </view>
+  <view class="videoBox">
+    <!-- <video src="http://10.1.20.136/assLogo/xcsp.mp4" poster="http://mmbiz.qpic.cn/mmbiz_jpg/S2QIjGmZ77R0fUAaccCG1Egu0MS694l7KpbibG0FTHQ7pKllbznexRouWK2nzxcpRZKCIa0YWfvn5DbRRNwz70A/0?wx_fmt=jpeg" webkit-playsinline="isiPhoneShowPlaysinline" playsinline="isiPhoneShowPlaysinline" preload="metadata"  controls="controls" class="video_fill" object-fit="fill"></video> -->
+    <image class="image" src="http://10.1.20.136/assLogo/宣传图片.jpg"></image>
+  </view>
+</view>
+
+<!--无法连接校园网-->
+<view class="card" wx:else>
+  <view class="top">
+    <view class="box1">提示信息</view>
+    <image class="logo" src="/images/logo.png"></image>
+  </view>
+  <view class="wrapper">
+    <view class="tips">
+      无法与内网服务器通信，请连接校内<text style="font-size: 28rpx">WiFi</text
+    >后使用。
+    </view>
+    <button class="retry" bindtap="reConnected">重试</button>
+  </view>
+</view>
+
+<van-dialog id="van-dialog" show="{{ show }}" title="订阅消息" message="感谢您使用我们的小程序！\n为了方便后续通知您下一次面试结果，我们将向您授权发起一条订阅消息" show-cancel-button
+  confirm-button-text="同意" cancel-button-text="不同意" confirm-button-color="#0f4f96" bind:cancel="onCancel" bind:confirm="onConfirm" bind:close="onClose"
+/>

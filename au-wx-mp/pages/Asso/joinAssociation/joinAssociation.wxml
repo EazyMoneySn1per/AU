@@ -1,0 +1,64 @@
+<page-meta>
+  <navigation-bar
+    title="报 名 系 统"
+  />
+</page-meta>
+
+<view class="joinAssociationContainer">
+  <image class="banner" src="https://s1.328888.xyz/2022/06/01/5kNPC.png"></image>
+  <view class="form">
+    <view class="formItem gender">
+      <image src="/images/icons/input_sex.png"></image>
+      <van-radio-group model:value="{{ gender }}" direction="horizontal">
+        <van-radio checked-color="#0f4f96" name="男">男</van-radio>
+        <van-radio checked-color="#0f4f96" name="女">女</van-radio>
+      </van-radio-group>
+    </view>
+    <view class="formItem phone" style="margin-bottom: 0;">
+      <van-icon name="phone-o" color="#0f4f96" size="52rpx" style="transform: translateX(4px); margin-right: 48rpx;" />
+      <van-field model:value="{{ phone }}" placeholder="请输入手机号码" clearable  clickable style="transform: translateX(-30rpx);"
+      placeholder-style="font-size: 30rpx; color: #999" border="{{false}}"
+      />
+    </view>
+    <view class="formItem wx">
+      <van-icon name="smile-comment-o" color="#0f4f96" size="52rpx"
+        style="transform: translateX(4px); margin-right: 48rpx;" />
+      <!-- <input model:value="{{ wx }}" placeholder="请输入微信号" /> -->
+      <van-field model:value="{{ wx }}" placeholder="请输入微信号码" clearable  clickable  style="transform: translateX(-30rpx);"
+      placeholder-style="font-size: 30rpx; color: #999" border="{{false}}"
+      />
+    </view>
+    <view class="formItem ownInfo">
+      <van-icon name="records" color="#0f4f96" size="52rpx" style="transform: translateX(4px); margin-right: 48rpx;" />
+      <van-field
+        model:value="{{ ownInfo }}"
+        type="textarea"
+        placeholder="请输入留言"
+        show-word-limit="{{true}}"
+        maxlength="150"
+        placeholder-style="color: #7a7a7a"
+      />
+    </view>
+    <view class="formItem chooseAsso">
+      <image src="/images/icons/input_chooseAss.png" style="transform: translateX(4px);"></image>
+      <view class="showPicker" style="position: relative;" bindtap="showPicker">
+        {{pickerValue1 === '' ? '报名社团' : pickerValue1}}
+        <van-icon name="arrow-down" style="position: absolute; right: 28rpx; top: 20rpx;" />
+      </view>
+      <van-popup show="{{ show }}" position="bottom" custom-style="height: 40%;">
+        <van-picker show-toolbar columns="{{ columns }}" 
+        bind:cancel="onCancel" 
+        bind:confirm="onConfirm"
+        bind:change="onChange" />
+      </van-popup>
+    </view>
+    <view class="formItem submit">
+      <button class="sumbit" bindtap="submit">提交</button>
+    </view>
+  </view>
+</view>
+
+<van-notify id="van-notify" />
+<van-dialog id="van-dialog" show="showDialog" title="隐私政策" message="感谢您使用我们的小程序！\n为了方便后续通知您是否通过社联或者社团的审核，我们将收集您的个人信息，并且保存于深圳技术大学内网服务器中且不会用于其他用途" show-cancel-button
+  confirm-button-text="同意" cancel-button-text="不同意且登出" confirm-button-color="#0f4f96" bind:cancel="onLogOut"
+/>

@@ -1,0 +1,13 @@
+<view class="card">
+  <view class="top">
+    <view class="box1">提示信息</view>
+    <image class="logo" src="/images/logo.png"></image>
+  </view>
+  <view class="wrapper">
+    <view class="tips">
+      无法与内网服务器通信，请连接校内<text style="font-size: 28rpx">WiFi</text
+      >后使用。
+    </view>
+    <button class="retry" bindtap="redirect">重试</button>
+  </view>
+</view>

@@ -1,0 +1,29 @@
+<view class="banner">
+</view>
+
+<view class="assContent">
+  <view class="assLogo">
+    <image src="{{'http://10.1.20.136/assLogo/' + obj.logo}}"></image>
+    <view class="assName">{{obj.assName}}</view>
+    <view class="presidentName">现任社长：{{obj.presidentName}}
+    </view>
+  </view>
+  <view class="assDesc">
+    <view class="top">
+      <image class="icon" src="/images/icons/assActivity.png"></image>
+      社团简介
+    </view>
+    <view class="desc">
+      {{obj.desc}}
+    </view>
+  </view>
+  <view class="assActivity">
+    <view class="top">
+      <image class="icon" src="/images/icons/assActivity.png"></image>
+      社团活动
+    </view>
+    <image style="width: 95%; height: 300rpx; margin: 20rpx auto;" src="http://mmbiz.qpic.cn/mmbiz_jpg/S2QIjGmZ77TGuiaIPSub7ibEebezete1Ljz03DkhVkmNzOSq1iazXnDfsqHyetSVrVs15tiarjb15u5I5mDteQdjeQ/0?wx_fmt=jpeg" bindtap="goto"></image>
+
+
+  </view>
+</view>

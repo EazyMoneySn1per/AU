@@ -1,0 +1,119 @@
+page {
+  padding-bottom: 150px;
+}
+
+.title {
+  height: 38px;
+  line-height: 38px;
+  padding-left: 26rpx;
+  background-color: rgba(248, 248, 248, 100);
+  color: rgb(102, 101, 101);
+  border-bottom: 2px solid #e5e5e5;
+  border-top: 2px solid #e5e5e5;
+}
+
+.question-type {
+  height: 163px;
+  line-height: 20px;
+  background-color: rgba(255, 255, 255, 100);
+  color: rgba(16, 16, 16, 100);
+  font-size: 14px;
+  padding-left: 30rpx;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+}
+
+.van-checkbox {
+  /* margin-bottom: 15px; */
+}
+.van-checkbox-group {
+  height: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+textarea {
+  height: 90px !important;
+}
+
+.file {
+  background-color: #fff;
+  height: 360rpx;
+  margin-top: 20px;
+  padding: 20rpx 40rpx;
+}
+
+.file .text {
+  color: rgba(16, 16, 16, 100);
+  /* font-size: 20px; */
+  opacity: 0.63;
+  margin-bottom: 16px;
+}
+
+.van-uploader {
+  background-color: #fafafa;
+  /* border: 1px solid rgba(0, 0, 0, 0.15); */
+  /* border-radius: 8rpx; */
+  /* box-sizing: border-box; */
+  /* margin: 0 20rpx 20rpx 0; */
+}
+
+.van-uploader__wrapper {
+  background-color: #fff;
+}
+.van-uploader__upload,
+.van-uploader__preview {
+  width: 200rpx !important;
+  height: 200rpx !important;
+  box-sizing: border-box;
+  margin-bottom: 0 !important;
+}
+.van-uploader__preview-image {
+  width: 200rpx !important;
+  height: 200rpx !important;
+}
+
+.percent {
+  text-align: right;
+}
+
+.bottom-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+.bottom-bar .feedback-submit {
+  height: 70px;
+  line-height: 70px;
+  background-color: #024e9b;
+  font-size: 24px;
+  color: #fff;
+}
+.feedback-submit:active {
+  opacity: 0.8;
+}
+.bottom-bar .progess {
+  background-color: #fff;
+  height: 40px;
+  border-top: 1px solid #bbbbbb;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  padding: 24rpx 42rpx;
+}
+
+.bottom-bar .progress-main {
+  position: absolute;
+  width: 640rpx;
+  padding-right: 30px;
+  box-sizing: border-box;
+  left: 45px;
+  top: 13px;
+  color: rgba(0, 0, 0, 0.45);
+}
+
+.van-progress {
+  margin-top: 8px;
+  transition: 100ms !important;
+}

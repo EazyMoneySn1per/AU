@@ -1,0 +1,85 @@
+.van-notice-bar {
+  height: 80rpx;
+}
+
+.ass-card {
+  display: flex;
+  align-items: center;
+  height: 150px;
+  background-color: white;
+  margin-top: 20rpx;
+}
+
+.ass-card-left,
+.my-ass-card-right {
+  flex: 1;
+}
+
+.ass-card-left-assName {
+  padding-top: 8rpx;
+  font-size: 28rpx;
+}
+.ass-card-right-assInfo {
+  color: #888888;
+  font-size: 24rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+}
+.ass-card-right-assInfo .van-tag {
+  font-size: 12px;
+}
+.ass-card-right-assInfo-status {
+  font-weight: 700;
+  color: black;
+}
+
+.ass-card-right {
+  height: 100%;
+}
+.ass-card-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 300rpx;
+  width: 300rpx;
+}
+
+.my-ass-card-right {
+  width: 400rpx;
+  height: 100%;
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20rpx 0;
+
+  transform: translateX(-8px);
+}
+
+.my-ass-card-right .van-cell {
+  width: 90%;
+  padding: 0 !important;
+  color: #888888 !important;
+  font-size: 24rpx !important;
+  transform: translateY(-2px);
+}
+
+.van-steps--horizontal {
+  width: 90%;
+  padding: 0 !important;
+  margin-bottom: 10px !important;
+}
+
+.van-button--large {
+  color: #0f4f96 !important;
+}
+
+.van-button {
+  padding: 24rpx !important;
+}
+
+.empty-1 {
+  margin-top: 80rpx !important;
+}

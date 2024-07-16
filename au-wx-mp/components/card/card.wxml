@@ -1,0 +1,7 @@
+<view class="card" bindtap="goto" data-url="{{url}}" bindtap="goto">
+  <view v-if="time" class="card-time">{{ time }}</view>
+  <image class="image" src="{{picUrl}}"></image>
+  <view class="card-title">
+    {{title}}
+  </view>
+</view>

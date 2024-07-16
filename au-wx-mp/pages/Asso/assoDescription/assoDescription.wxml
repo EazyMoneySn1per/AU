@@ -1,0 +1,13 @@
+<view
+  class="container"
+  hover-class="none"
+  hover-stop-propagation="false"
+>
+  <card
+    wx:for="{{ twitterList }}"
+    wx:key="index"
+    picUrl="{{ item.picUrl }}"
+    url="{{ item.url }}"
+    title="{{ item.title }}"
+  ></card>
+</view>

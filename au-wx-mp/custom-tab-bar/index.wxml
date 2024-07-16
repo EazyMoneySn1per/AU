@@ -1,0 +1,12 @@
+<!-- <van-tabbar active="{{ active }}" bind:change="onChange" style="display: flex; align-items: center;">
+  <van-tabbar-item wx:for="{{list}}" wx:key="index" icon="{{item.icon}}">
+    {{item.text}}
+  </van-tabbar-item>
+</van-tabbar> -->
+
+<view class="tabbar">
+    <view class="tabbarItem {{active === item.index ? 'active':''}}" wx:for="{{list}}" wx:key="index" bindtap="onChange" data-index="{{item.index}}">
+        <van-icon name="{{item.icon}}"></van-icon>
+        <text>{{item.text}}</text>
+    </view>
+</view>

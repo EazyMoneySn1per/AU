@@ -1,0 +1,41 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /
+wxconfig:
+  appid: wxce51d21a2b4b2e7d
+  appsecret: ba728f7f08739d024e18a85571fe41cf
+
+mpconfig:
+  appid: wxb0b3143bc0dc6e4a
+  appsecret: 70f73753e346b985867d87322fd549f1
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/db1?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true&useSSL=false
+    username: root
+    password: 123456
+#  datasource:
+#   url: jdbc:mysql://10.1.20.136:3306/jdbc?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true&useSSL=false
+#   username: root
+#   password:
+  jpa:
+    show-sql: true
+    hikari:
+      ddl-auto: update
+      connection-init-sql: set names utf8mb4
+    tomcat:
+      init-s-q-l: SET NAMES utf8mb4
+upload:
+  activity:
+    path: /Users/frankkkkkk/Desktop/activities
+  picture:
+    path: /Users/frankkkkkk/Desktop/twitter
+  outlay:
+    path: /Users/frankkkkkk/Desktop/outlay
+  synthesizesubmit:
+    path: /Users/frankkkkkk/Desktop/synthesizesubmit
+  assLogo:
+    path: /Users/frankkkkkk/Desktop/twitter
+interviewass:
+  opentime: 2021-09-23 00:00:00
+  endtime: 2021-10-1 00:00:00
